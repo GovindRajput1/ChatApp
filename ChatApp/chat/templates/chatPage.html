@@ -6,17 +6,17 @@
 	{% if request.user.is_authenticated %}
 	<center> Logout the chat Page <a href = "{% url 'logout-user' %}">Logout</a></center>
 	{% endif %}
-	<div
+<div
 	class="chat__item__container"
 	id="id_chat_item_container"
 	style="font-size: 20px"
 	>
-	<br />
+	<br/>
 	<input type="text" id="id_message_send_input" />
 	<button type="submit" id="id_message_send_button">Send Message</button>
-	<br />
-	<br />
-	</div>
+	<br/>
+	<br/>
+</div>
 	<script>
 	const chatSocket = new WebSocket("ws://" + window.location.host + "/");
 	chatSocket.onopen = function (e) {
